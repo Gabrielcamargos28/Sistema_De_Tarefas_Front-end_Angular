@@ -1,0 +1,66 @@
+<div>
+    <mat-card>
+        <form [formGroup]="cadastroForm">
+            <mat-card-title>
+                Crie sua conta
+            </mat-card-title>
+            <mat-card-content>
+                <div class="grid-container">
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>Nome</mat-label>
+                        <input matInput formControlName="nome" placeholder="Nome">
+                        <mat-error *ngIf="cadastroForm.get('nome')?.errors">Nome é obrigatório</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="grid-item">
+                    <div class="radio-group">
+                        <label>Cargo</label>
+                        <mat-radio-group formControlName="role" color="primary">
+                            <mat-radio-button value="ADMIN">Admin</mat-radio-button>
+                            <mat-radio-button value="USER">User</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <div class="acessoPerfil">
+                <h2>Dados de acesso</h2>
+            </div>
+            <mat-card-content>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Login</mat-label>
+                            <input matInput formControlName="login" type="text" placeholder="Digite seu login">
+                            <mat-error *ngIf="cadastroForm.get('login')?.errors?.['required']">login é
+                                obrigatório</mat-error>
+                            <mat-error *ngIf="cadastroForm.get('login')?.errors?.['login']">login
+                                inválido</mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Senha</mat-label>
+                            <input matInput formControlName="senha" type="password" placeholder="Digite sua senha">
+                            <mat-error *ngIf="cadastroForm.get('senha')?.errors?.['required']">Senha é
+                                obrigatória</mat-error>
+                            <mat-error *ngIf="cadastroForm.get('senha')?.errors?.['minlength']">Senha deve ter pelo
+                                menos 3 caracteres</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Confirmar Senha</mat-label>
+                        <input matInput formControlName="confirmarSenha" type="password" placeholder="Repita sua senha">
+                        <mat-error *ngIf="cadastroForm.get('confirmarSenha')?.errors?.['required']">Confirmação
+                            de
+                            Senha é obrigatória</mat-error>
+                        <mat-error *ngIf="cadastroForm.get('confirmarSenha')?.errors?.['equalTo']">Senhas
+                            diferentes</mat-error>
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+            <mat-card-actions class="full-width">
+                <button (click)="executarAcao()" mat-flat-button color="primary">CADASTRAR
+                </button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</div>

@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-title>Confirmar Exclusao Cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="cliente.nome" name="nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefone" [value]="cliente.telefone" name="telefone">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cep" [value]="cliente.cep" name="cep">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Numero" [value]="cliente.numero" name="numero">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="cpf" [value]="cliente.cpf" name="numero">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="cnpj" [value]="cliente.cnpj" name="numero">
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<button mat-raised-button (click)="disableCliente()" color="warn">
+    Desativar
+</button>
+
+<button mat-raised-button (click)="cancel()" color="primary">
+    Cancelar
+</button>

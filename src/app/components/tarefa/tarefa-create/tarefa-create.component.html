@@ -1,0 +1,39 @@
+<mat-card class="container-form">
+    <mat-card-title class="tittle">Nova Tarefa</mat-card-title>
+    <form [formGroup]="tarefaForm" #formDir="ngForm">
+        <mat-form-field>
+            <input type="text" matInput placeholder="Nome" formControlName="nome" name="nome" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="descricao" formControlName="descricao" name="descricao" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="fk_id_cliente" formControlName="fk_id_cliente" name="fk_id_cliente" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="fk_id_funcionario" name="fk_id_funcionario"
+                formControlName="fk_id_funcionario">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Data da Live</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="data_limite" name="data_limite">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Horário da Live</mat-label>
+            <input type="time" matInput formControlName="horario" name="horario" #time />
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<div class="buttons-box">
+    <button mat-raised-button (click)="createTarefa()" color="primary">
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()" color="primary">
+        Cancelar
+    </button>
+</div>

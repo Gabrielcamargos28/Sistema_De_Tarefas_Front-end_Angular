@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; 
+    font-family: 'Handjet', cursive;
+}
+body { margin: 0;}
+
+.red{
+    color:red;
+}
+.v-middle{
+    vertical-align: middle;
+}
+
+.msg-success{
+    background-color: #28a755;
+    color: #fff;
+}
+
+.msg-success{
+    background-color: red;
+    color: #fff;
+}
+.container-form{
+    width: 50%;
+}
+.buttons-box{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+.sidenav{
+    background-color: #4088B8;
+    width: 200px;
+}
+
+.sidenav i {
+    color: #FFF;
+    padding-right: 10px;
+}
+
+.mat-drawer-content{
+    padding: 16px;
+    background-color: #4EA4DE;
+    height: 100%;
+}

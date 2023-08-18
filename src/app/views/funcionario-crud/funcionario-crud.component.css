@@ -1,0 +1,12 @@
+button{
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.full-width-table {
+    width: 100%;
+}
+.container{
+    height: 500px;
+    justify-content: flex-start;
+    margin-left: 200px;
+}

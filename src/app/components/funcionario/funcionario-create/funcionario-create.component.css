@@ -1,0 +1,18 @@
+.tittle{
+    margin-bottom: 15px;
+}
+.container{
+    width: 50%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    width: 100%;
+  }
+  
+button{
+    margin-top: 20px;
+}

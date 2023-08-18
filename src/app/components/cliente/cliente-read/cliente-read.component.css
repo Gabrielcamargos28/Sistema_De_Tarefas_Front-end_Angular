@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    height: 400px;
+}
+  button {
+    margin: 10px
+  }
+  
+  .edit{
+    margin-right: 10px;
+  }
+  .edit > i{
+    color: #4088B8;
+  }
+  
+  .delete > i{
+    color: #e35e6b;
+  }
+  
+.mat-mdc-table {
+    width: 100%;
+    max-height: 500px;
+    overflow: auto;
+}
+.mat-column-name {
+    height: 100px;
+}
+
+.mdc-data-table__row{
+    height: 0px;
+}
+.mdc-data-table__header-row{
+    height: 0;
+}
+  
